@@ -199,16 +199,16 @@ def main():
             ),
     ]
     level = inquirer.prompt(questions)
-    print (level)
+    # print (level)
 
-    # if (level == "Easy"):
-    #     url = "https://www.puzzle-minesweeper.com/minesweeper-5x5-easy/"
-    # elif (level == 'Medium'):
-    #     url = "https://www.puzzle-minesweeper.com/minesweeper-7x7-easy/"
-    # else:
-    #     url = "https://www.puzzle-minesweeper.com/minesweeper-10x10-easy/"
+    if (level['level'] == "Easy"):
+        url = "https://www.puzzle-minesweeper.com/minesweeper-5x5-easy/"
+    elif (level['level'] == 'Medium'):
+        url = "https://www.puzzle-minesweeper.com/minesweeper-10x10-easy/"
+    else:
+        url = "https://www.puzzle-minesweeper.com/minesweeper-20x20-easy/"
     
-    url = "https://www.puzzle-minesweeper.com/minesweeper-5x5-easy/"
+    # url = "https://www.puzzle-minesweeper.com/minesweeper-7x7-easy/"
     initBoard=getboard.main(url)
     # 10x10 sample
     # initBoard=[
@@ -244,6 +244,7 @@ def main():
     
     lenBoard=len(initBoard)
     board=Board(lenBoard)
+    
     for x in range(0,lenBoard):
         for y in range(0,lenBoard):
             if initBoard[x][y]!='w':

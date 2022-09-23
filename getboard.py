@@ -34,7 +34,8 @@ def main(url):
         else:
             rs.append('w')
     arr=np.reshape(rs,(int(sqrt(len(rs))),int(sqrt(len(rs)))))
-    arr=split(rs,5)
+    # print (type())
+    arr=split(rs,int(sqrt(len(rs))))
     # time.sleep(4)
     driver.close()
     return arr
