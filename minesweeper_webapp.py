@@ -7,9 +7,14 @@ app = Flask(__name__)
 client = MongoClient('mongodb://localhost:27017/')
 db = client["minesweeper_db"]
 
+
 @app.route('/')
 def demo():
     return render_template('base.html')
+
+@app.route('/answer')
+def result():
+    return render_template('answer.html')
 
 @app.route('/minesweeper')
 def minesweeper():

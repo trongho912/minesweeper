@@ -209,7 +209,7 @@ def main():
         url = "https://www.puzzle-minesweeper.com/minesweeper-20x20-easy/"
     
     # url = "https://www.puzzle-minesweeper.com/minesweeper-7x7-easy/"
-    initBoard=getboard.main(url)
+    initBoard=getboard.getboard(url)
     # 10x10 sample
     # initBoard=[
     #     ['w','w','w','w','w','w','w','w','w','w'],

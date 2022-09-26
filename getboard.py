@@ -16,7 +16,7 @@ def split(arr, size):
     arrs.append(arr)
     return arrs
 
-def main(url):
+def getboard(url):
     chrome_options = Options()
     chrome_options.add_experimental_option("detach", True)
     url_file_drive = os.path.join('etc','chromedriver.exe')
